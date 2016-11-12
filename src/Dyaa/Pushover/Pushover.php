@@ -20,6 +20,7 @@ class Pushover
     private $expire;
     private $title;
     private $msg;
+    private $html;
 
     public function __construct(Repository $config)
     {
@@ -90,6 +91,11 @@ class Pushover
     public function user($user_key)
     {
         $this->user_key = $user_key;
+    }
+    
+    public function html($html = 0)
+    {
+        $this->$html = $html;
     }
 
     public function send($html = 0)
