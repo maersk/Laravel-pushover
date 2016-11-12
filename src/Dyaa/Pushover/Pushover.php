@@ -98,7 +98,7 @@ class Pushover
         $this->$html = $html;
     }
 
-    public function send(
+    public function send()
     {
         $c = curl_init();
         curl_setopt($c, CURLOPT_URL, self::API_URL);
