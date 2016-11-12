@@ -98,7 +98,7 @@ class Pushover
         $this->$html = $html;
     }
 
-    public function send($html = 0)
+    public function send(
     {
         $c = curl_init();
         curl_setopt($c, CURLOPT_URL, self::API_URL);
@@ -119,7 +119,7 @@ class Pushover
             'priority'  => $this->priority,
             'retry'     => $this->retry,
             'expire'    => $this->expire,
-            'html'      => $html
+            'html'      => $this->html
         ));
 
         $response = curl_exec($c);
