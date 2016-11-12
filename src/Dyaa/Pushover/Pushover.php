@@ -95,7 +95,7 @@ class Pushover
     
     public function html($html = 0)
     {
-        $this->$html = $html;
+        $this->html = $html;
     }
 
     public function send()
